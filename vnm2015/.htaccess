@@ -1,0 +1,5 @@
+#Acceso a archivos
+RewriteEngine on
+#RewriteRule ^usuarios/ usuarios/controller.php
+#RewriteRule ^modulo/ vnm.php
+#RewriteRule ^/ vnm.php
