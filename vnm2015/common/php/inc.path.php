@@ -4,7 +4,7 @@
 ##
 session_name('ddvc');
 session_start();
-$PublicFolder="www";
+$PublicFolder="htdocs";
 $SiteFolder="vnm2015";
 $DirLocal=getcwd();
 $path=explode($SiteFolder,$DirLocal);

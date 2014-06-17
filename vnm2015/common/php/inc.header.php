@@ -22,6 +22,7 @@ $Path[html]=$Raiz[local].'html/';
 require_once($Path[php].'inc.functions.php');
 require_once($Path[php].'inc.template.php');
 require_once($Path[php].'class.pdo.php');
+require_once($Path[php].'inc.mysqli.php');
 // Parsea parámetros obtenidos por URL y los pone en arrays: $in[] y $ins[]
 parseFormSanitizer($_GET, $_POST); # $ins[]
 parseForm($_GET, $_POST); # $in[]
