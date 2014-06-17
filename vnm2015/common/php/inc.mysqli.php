@@ -5,12 +5,10 @@
 *   O3M
 */
 
+include_once ("conexion.php");
 function SQLConn() {
-	$host='localhost';
-	$user='root';
-	$pass='1234';
-	$database='ife_vnm2015';
 
+	global ($host,$user,$pass,$database);
 	$link = new mysqli($host,$user,$pass,$database);
 	if ($link ->connect_error) {
 		echo "Error de Connexion ($link->connect_errno) $link->connect_error\n";
