@@ -23,7 +23,7 @@ if(!empty($ins[usuario]) && !empty($ins[clave])){
 	$tmpClave = 'super';
 	if($ins[usuario]==$tmpUsuario && $ins[clave]==$tmpClave){
 		$_SESSION['usuario'] = $ins[usuario];
-		header('location: vnm.php?a=test');
+		header('location: vnm.php?a=frame');
 	}else{
 		header('location: index.php?e=2');
 	}

@@ -8,7 +8,7 @@
 include_once ("conexion.php");
 function SQLConn() {
 
-	global ($host,$user,$pass,$database);
+	global $host,$user,$pass,$database;
 	$link = new mysqli($host,$user,$pass,$database);
 	if ($link ->connect_error) {
 		echo "Error de Connexion ($link->connect_errno) $link->connect_error\n";

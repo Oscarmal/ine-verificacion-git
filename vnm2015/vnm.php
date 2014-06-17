@@ -12,7 +12,8 @@ $actionList = array(
 		 INICIO => 'index.php'
 		,TEST => 'modulo/test.php'
 		,SALIR => 'index.php?e=1'
-		);
+		,FRAME => 'modulo/index.php'
+		,HEADER => 'modulo/header.php');
 if(array_key_exists($action,$actionList)){
 	// if(!@include_once($Raiz[local].$actionList[$action])){
 	// 	$page = file_get_contents($Raiz[url].$actionList[$action]);
