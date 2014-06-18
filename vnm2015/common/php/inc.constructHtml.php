@@ -93,8 +93,7 @@ function errorHtml($params=array()){
 	$error->set('PATH_JS', $Path[js]);
 	$error->set('PATH_CSS', $Path[css]);
 	$error->set('PATH_IMG', $Path[img]);
-	$error->set('INCLUDES',includesHtml());
-	$error->set('MENSAJE', $params[MENSAJE].' '.$params[ACCION]);
+	$error->set('INCLUDES',includesHtml());	
 	$error->set('FOOTER',footerHtml());
 	// Busca variables adicionales dentro array $params
 	if($tvars = count($params)){		
@@ -104,6 +103,7 @@ function errorHtml($params=array()){
 			$error->set($vname, $vvalue);
 		}
 	}
+	$error->set('MENSAJE', $params[MENSAJE].' '.$params[ACCION]);
 	$error=$error->output();
 	return $error;
 }
