@@ -9,16 +9,16 @@
 #Acciones
 $action = strtoupper($ins[a]);
 $actionList = array(
-		 INICIO => 'index.php'
-		,CONTENIDO => 'modulo/test.php'
+		 INICIO => 'modulo/inicio.php'
+		,CONTENIDO => 'modulo/inicio.php'
 		,SALIR => 'index.php?e=1'
 		,FRAME => 'modulo/index.php'
 		,HEADER => 'modulo/html_header.php'
 		,FOOTER => 'modulo/html_footer.php'
 		,MENU => 'modulo/menutop.php'
-		,ENUMERACION => 'modulo/enumeracion/'
-		,COBERTURA => 'modulo/cobertura/'
-		,ACTUALIZACION => 'modulo/actualizacion/'
+		// ,ENUMERACION => 'modulo/enumeracion/'
+		// ,COBERTURA => 'modulo/cobertura/'
+		// ,ACTUALIZACION => 'modulo/actualizacion/'
 		);
 
 if(array_key_exists($action,$actionList)){

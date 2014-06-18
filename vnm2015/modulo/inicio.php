@@ -15,9 +15,7 @@ $tabla = '<table border="1">
 				</tr>
 			</tbody>
 		</table>
-		<hr/>
-		<a href="'.$Path[src].'php/vnm.php?a=salir">Salir</a>
-		<a href="'.$Path[src].'php/vnm.php">[Error]</a>';
+		<hr/>';
 $tpl_data = array( 
 			 VARIABLE1 => 'Uno'
 			,VARIABLE2 => 'Dos'
