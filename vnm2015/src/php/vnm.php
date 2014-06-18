@@ -9,20 +9,23 @@
 #Acciones
 $action = strtoupper($ins[a]);
 $actionList = array(
-		 INICIO => 'index.php'
-		,TEST => 'modulo/test.php'
+		 INICIO => 'modulo/inicio.php'
+		,CONTENIDO => 'modulo/inicio.php'
 		,SALIR => 'index.php?e=1'
 		,FRAME => 'modulo/index.php'
-		,HEADER => 'modulo/header.php');
+		,HEADER => 'modulo/html_header.php'
+		,FOOTER => 'modulo/html_footer.php'
+		,MENU => 'modulo/menutop.php'
+		// ,ENUMERACION => 'modulo/enumeracion/'
+		// ,COBERTURA => 'modulo/cobertura/'
+		// ,ACTUALIZACION => 'modulo/actualizacion/'
+		);
+
 if(array_key_exists($action,$actionList)){
-	// if(!@include_once($Raiz[local].$actionList[$action])){
-	// 	$page = file_get_contents($Raiz[url].$actionList[$action]);
-	// 	print $page;
-	// }
 	header('location: '.$Raiz[url].$actionList[$action]);
 }else{
-	$tpl_data  = array(contenido => array(MENSAJE => "Acción no disponible. ".$action));
-	html($Path['html'].'error.html', array_merge($tpl_data,$tpl_header,$tpl_menu,$tpl_submenu));
+	$params = array(MENSAJE => "Acción no disponible.", ACCION => $action);
+	print(errorHtml($params));
 }
 /*O3M*/
 ?>

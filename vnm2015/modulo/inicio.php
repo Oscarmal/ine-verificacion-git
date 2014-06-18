@@ -1,6 +1,6 @@
 <?php session_name('ddvc'); session_start(); include_once($_SESSION['header_path']);?>
 <?php
-$vista = $Path[html].'test.html';
+$vista = 'test.html';
 $tabla = '<table border="1">
 			<thead>
 				<th>A</th>
@@ -15,15 +15,11 @@ $tabla = '<table border="1">
 				</tr>
 			</tbody>
 		</table>
-		<hr/>
-		<a href="'.$Raiz[url].'vnm.php?a=salir">Salir</a>
-		<a href="'.$Raiz[url].'vnm.php">[Error]</a>';
+		<hr/>';
 $tpl_data = array( 
-		contenido => array(
 			 VARIABLE1 => 'Uno'
 			,VARIABLE2 => 'Dos'
 			,VARIABLE3 => $tabla
-			)
 		);
-html($vista, array_merge($tpl_data,$tpl_header,$tpl_menu,$tpl_submenu));
+print(contenidoHtml($vista, $tpl_data));
 ?>
