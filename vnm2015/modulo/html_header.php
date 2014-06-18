@@ -3,7 +3,7 @@
 require_once($Path[mod].'menutop.php');
 $vista = 'header.html';
 $tpl_data = array( 
-			 LOGO => $Path[img].'logo.jpg'
+			 LOGO => $Path[img].'ifenormal.png'
 			,FECHA => date('Y/m/d H:i:s')
 			,MENU => $menutop
 		);
