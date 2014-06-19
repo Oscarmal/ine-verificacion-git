@@ -1,6 +1,6 @@
 <?php session_name('ddvc'); session_start(); include_once($_SESSION['header_path']);?>
 <?php
-$vista = 'test.html';
+$vista = 'inicio.html';
 $tabla = '<table border="1">
 			<thead>
 				<th>A</th>

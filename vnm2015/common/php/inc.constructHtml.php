@@ -25,6 +25,8 @@ function contenidoHtml($template='error.html', $params=array()){
 			$html->set($vname, $vvalue);
 		}
 	}
+	$more = ($params[MORE])?$params[MORE]:'';
+	$html->set('MORE', $more);
 	$html=$html->output();
 	return $html;
 }
@@ -45,6 +47,8 @@ function headerHtml($template='header.html', $params=array()){
 			$header->set($vname, $vvalue);
 		}
 	}
+	$more = ($params[MORE])?$params[MORE]:'';
+	$header->set('MORE', $more);
 	$header=$header->output();
 	return $header;
 }
@@ -70,6 +74,8 @@ function footerHtml($template='footer.html', $params=array()){
 	$footer->set('PATH_CSS', $Path[css]);
 	$footer->set('PATH_IMG', $Path[img]);
 	$footer->set('ANIO', date('Y'));
+	$more = ($params[MORE])?$params[MORE]:'';
+	$footer->set('MORE', $more);
 	$footer=$footer->output();
 	return $footer;
 }

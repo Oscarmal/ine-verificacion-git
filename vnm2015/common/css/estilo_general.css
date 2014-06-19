@@ -1,0 +1,110 @@
+/*O3M*/
+body { 
+	font-family:Arial, Helvetica, sans-serif;
+	color:#333;
+	font-size: 12px;
+	text-align:center; 
+	margin: 0 0 0 0;
+}
+table{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#333;
+	font-size: 12px;
+	border-collapse: collapse;
+}
+div,span{ text-align: left;}
+input, textarea, select{
+	font-size:.9em;
+	border:#DDD solid 1px;
+	color:#333;
+	font-weight:bold;
+}
+input:focus, textarea:focus, select:focus{
+	border:#F500AB solid 1px;
+	background-color:#FBE6FA;	
+}
+/*Links*/
+a:link { text-decoration: none; color:#D821AA; cursor: pointer; cursor: hand;}
+a:visited { text-decoration: none; color:#D821AA; }
+a:hover { text-decoration: underline; color:#FFCC66; }
+.link, link:hover {
+	cursor: pointer; cursor: hand;
+}
+/*--*/
+/*Botones*/
+.btn{
+	text-align: center;
+	background-color: #42B0EF; 
+	color: #FFF;
+	font-weight: bold;
+	border: 1px #DDD solid;   
+	width: 100%;
+	padding-left: 4px;
+	padding-right: 4px;
+	text-shadow: -1px -1px 2px #618926;
+	border-radius: 9px;
+	-moz-border-radius: 9px;
+	-webkit-border-radius: 9px;
+}
+.btn:hover {
+	text-align: center;
+	background-color: #C1E2F5;
+	color: #333;
+	font-weight: bold;
+	border: 1px #DDD solid;   
+	width: 100%;    
+	text-shadow: -1px -1px 2px #465f97;
+	border-radius: 9px;
+	-moz-border-radius: 9px;
+	-webkit-border-radius: 9px;
+	cursor: pointer; 
+	cursor: hand;
+}
+/*--*/
+/*MenuTop*/
+.btnMenu{
+	text-align: center;
+	background-color: #FFF; 
+	color: #FFF;
+	font-weight: bold;
+	border: 1px #DDD solid;   
+	width: 100%;
+	padding-left: 4px;
+	padding-right: 4px;
+	text-shadow: -1px -1px 2px #618926;
+}
+.btnMenu:hover {
+	text-align: center;
+	background-color: #DDD;
+	color: #333;
+	font-weight: bold;
+	width: 100%;    
+	text-shadow: -1px -1px 2px #465f97;
+	cursor: pointer; 
+	cursor: hand;
+}
+a.linkMenu:link { text-decoration: none; color:#333; cursor: pointer; cursor: hand;}
+a.linkMenu:visited { text-decoration: none; color:#333; }
+a.linkMenu:hover { text-decoration: none; color:#333; }
+#menuTop{
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
+	vertical-align: middle;
+}
+#fechaHoy{
+	
+	text-align: right;
+	vertical-align: middle;
+	padding-right: 5px;
+}
+/**/
+/*FOOTER*/
+#footer{	
+	font-size: 10px;
+	color: #AAA;
+	text-align: center;
+	vertical-align: middle;
+}
+/*--*/
+/*O3M*/
