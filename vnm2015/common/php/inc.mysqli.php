@@ -32,7 +32,7 @@ function SQLQuery($SQL){
 	    	$db = SQLConn(); //Llama conexión
 	    	$con = $db->query($SQL)or die(mysqli_connect_errno($db).' -> '.mysqli_connect_error()); //Ejecuta query	    	 	
 	    	if(mysqli_num_rows($con)){
-	    		while($Rows=mysqli_fetch_array($con)){$Result[]=$Rows;} //Recorre el resultado
+	    		$Result=mysqli_fetch_array($con);
 	    	}else{$Result=null;}
 	    	mysqli_close($db); //Cierra conexión
 	    	return $Result;

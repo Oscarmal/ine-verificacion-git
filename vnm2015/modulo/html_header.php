@@ -6,6 +6,7 @@ $tpl_data = array(
 			 LOGO => $Path[img].'ifenormal.png'
 			,FECHA => date('Y/m/d H:i:s')
 			,MENU => $menutop
+			,USUARIO => $usu[usuario].' | '.$usu[nombre]
 			,MORE => '<link href="'.$Path[css].'estilo_encabezado.css" rel="stylesheet" type="text/css">'
 		);
 print(headerHtml($vista,$tpl_data));

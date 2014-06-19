@@ -35,5 +35,10 @@ if(!$_SESSION['usuario']) {
 	header('location: '.$Raiz[url].'index.php?e=2');
 	exit();
 }
+$usu[usuario] = $_SESSION['usuario'];
+$usu[grupo] = $_SESSION['grupo'];
+$usu[nombre] = $_SESSION['usuarioNombre'];
+$usu[ent] = $_SESSION['ent'];
+$usu[dto] = $_SESSION['dto'];
 /*O3M*/
 ?>
