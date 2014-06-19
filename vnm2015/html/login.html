@@ -28,9 +28,9 @@
         </table>
         <hr/>
         <div style="text-align:center;">
-	        {MENSAJE}
+	        <div id="msj" style="text-align:center;">{MENSAJE}</div>
 			<table align="center">
-				<form id="flogin" method="post" action="index.php" >
+				<form id="flogin" method="post" action="" >
 				<tr>
 					<td>Usuario:</td>
 					<td><input type="text" id="usuario" name="usuario" size="15"></td>
@@ -40,7 +40,7 @@
 					<td><input type="password" id="clave" name="clave" size="15"></td>
 				</tr>
 				<tr>
-					<td colspan="2"><input type="submit" id="btnEntrar" name="btnEntrar" value="Entrar"></td>
+					<td colspan="2"><input type="button" id="btnEntrar" name="btnEntrar" value="Entrar" onclick="login()"></td>
 				</tr>
 				</form>
 			</table>

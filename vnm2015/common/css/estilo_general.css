@@ -13,13 +13,13 @@ table{
 	border-collapse: collapse;
 }
 div,span{ text-align: left;}
-input, textarea, select{
+textarea, select{
 	font-size:.9em;
 	border:#DDD solid 1px;
 	color:#333;
 	font-weight:bold;
 }
-input:focus, textarea:focus, select:focus{
+textarea:focus, select:focus{
 	border:#F500AB solid 1px;
 	background-color:#FBE6FA;	
 }

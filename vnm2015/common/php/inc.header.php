@@ -10,6 +10,7 @@ date_default_timezone_set("America/Mexico_City");
 header('Content-Type: text/html; charset=utf-8');
 // Detección de ruta y definicion de paths de trabajo
 require_once('inc.path.php');
+session_start();
 $Raiz[local] = $_SESSION[RaizLoc];
 $Raiz[url] = $_SESSION[RaizUrl];
 $Raiz[sitefolder] = $_SESSION[SiteFolder];

@@ -12,10 +12,11 @@ if(!empty($ins[usuario]) && !empty($ins[clave])){
 	$tmpClave = 'super';
 	if($ins[usuario]==$tmpUsuario && $ins[clave]==$tmpClave){
 		$_SESSION['usuario'] = $ins[usuario];
-		header('location: src/php/vnm.php?a=frame');
+		$Result = array(success => 1, url => 'src/php/vnm.php?a=frame');		
 	}else{
-		header('location: index.php?e=2');
+		$Result = array(success => 0, url => 'index.php?e=2');
 	}
 }
+echo json_encode($Result);
 /*O3M*/
 ?>

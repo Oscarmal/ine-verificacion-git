@@ -11,6 +11,7 @@ $Path[js]='common/js/';
 $Path[css]='common/css/';
 $Path[img]='common/img/';
 $Path[html]='html/';
+$Path[src]='src/';
 parseFormSanitizer($_GET, $_POST);
 /**********/
 //--Bussines
@@ -37,7 +38,8 @@ switch($ins[e]){
 //--Template
 $vista = 'login.html';
 $tpl_data = array(			
-			MORE => '<link href="'.$Path[css].'estilo_contenido.css" rel="stylesheet" type="text/css">'
+			MORE => '<link href="'.$Path[css].'estilo_contenido.css" rel="stylesheet" type="text/css">
+					<script type="text/javascript" src="'.$Path[src].'js/login.js"></script>'
 			,LOGO => $Path[img].'ifenormal.png'
 			,FECHA => date('Y/m/d H:i:s')
 			,MENSAJE => $msj
