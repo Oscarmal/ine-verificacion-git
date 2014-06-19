@@ -15,7 +15,8 @@ function contenidoHtml($template='error.html', $params=array()){
 	$html->set('PATH_JS', $Path[js]);
 	$html->set('PATH_CSS', $Path[css]);
 	$html->set('PATH_IMG', $Path[img]);
-	$html->set('INCLUDES', includesHtml());
+	$more = ($params[MORE])?$params[MORE]:'';
+	$html->set('INCLUDES', includesHtml($more));
 	$html->set('FOOTER', footerHtml());
 	// Busca variables adicionales dentro array $params
 	if($tvars = count($params)){		
@@ -25,8 +26,6 @@ function contenidoHtml($template='error.html', $params=array()){
 			$html->set($vname, $vvalue);
 		}
 	}
-	$more = ($params[MORE])?$params[MORE]:'';
-	$html->set('MORE', $more);
 	$html=$html->output();
 	return $html;
 }
@@ -39,7 +38,8 @@ function headerHtml($template='header.html', $params=array()){
 	$header->set('PATH_JS', $Path[js]);
 	$header->set('PATH_CSS', $Path[css]);
 	$header->set('PATH_IMG', $Path[img]);
-	$header->set('INCLUDES', includesHtml());	
+	$more = ($params[MORE])?$params[MORE]:'';
+	$header->set('INCLUDES', includesHtml($more));	
 	if($tvars = count($params)){		
 		$vnames = array_keys($params);
 		$vvalues = array_values($params);
@@ -47,20 +47,20 @@ function headerHtml($template='header.html', $params=array()){
 			$header->set($vname, $vvalue);
 		}
 	}
-	$more = ($params[MORE])?$params[MORE]:'';
-	$header->set('MORE', $more);
 	$header=$header->output();
 	return $header;
 }
 
 // -- Apoyos
-function includesHtml($template='includes.html', $params=array()){
+function includesHtml($more='', $template='includes.html', $params=array()){
 	global $Path, $Raiz;
 	#INCLUDES HTML
 	$htmlTpl = $Path['html'].$template;
 	$includes = new Template($htmlTpl);
 	$includes->set('PATH_JS', $Path[js]);
 	$includes->set('PATH_CSS', $Path[css]);
+	$more = ($more)?$more:'';
+	$includes->set('MORE', $more);
 	$includes=$includes->output();
 	return $includes;
 }
@@ -74,8 +74,6 @@ function footerHtml($template='footer.html', $params=array()){
 	$footer->set('PATH_CSS', $Path[css]);
 	$footer->set('PATH_IMG', $Path[img]);
 	$footer->set('ANIO', date('Y'));
-	$more = ($params[MORE])?$params[MORE]:'';
-	$footer->set('MORE', $more);
 	$footer=$footer->output();
 	return $footer;
 }

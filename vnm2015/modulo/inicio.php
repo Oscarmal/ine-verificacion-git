@@ -17,7 +17,8 @@ $tabla = '<table border="1">
 		</table>
 		<hr/>';
 $tpl_data = array( 
-			 VARIABLE1 => 'Uno'
+			 MORE => '<link href="'.$Path[css].'estilo_contenido.css" rel="stylesheet" type="text/css">'
+			,VARIABLE1 => 'Uno'
 			,VARIABLE2 => 'Dos'
 			,VARIABLE3 => $tabla
 		);
