@@ -36,10 +36,12 @@ switch($ins[e]){
 
 //--Template
 $vista = 'login.html';
-$contenido = '<h1>DDVC - Subdirección de Verificación</h1>
-			  <h2>Estructura de sistema VNM2015</h2>
-			  <hr/>'.$msj;
-$tpl_data = array(CONTENIDO => $contenido);
+$tpl_data = array(			
+			MORE => '<link href="'.$Path[css].'estilo_contenido.css" rel="stylesheet" type="text/css">'
+			,LOGO => $Path[img].'ifenormal.png'
+			,FECHA => date('Y/m/d H:i:s')
+			,MENSAJE => $msj
+			);
 print(contenidoHtml($vista, $tpl_data));
 /*O3M*/
 ?>

@@ -6,22 +6,47 @@
 		{INCLUDES}
 	</head>
 	<body >
-		{CONTENIDO}
-		<table>
-			<form id="flogin" method="post" action="index.php">
-			<tr>
-				<td>Usuario:</td>
-				<td><input type="text" id="usuario" name="usuario" size="15"></td>
-			</tr>
-			<tr>
-				<td>Clave:</td>
-				<td><input type="password" id="clave" name="clave" size="15"></td>
-			</tr>
-			<tr>
-				<td colspan="2"><input type="submit" id="btnEntrar" name="btnEntrar" value="Entrar"></td>
-			</tr>
-			</form>
-		</table>
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="200" align="left" valign="middle"><img src="{LOGO}"></td>
+            <td width="*" align="right">
+            <div style="text-align:right;" align="right">
+              <h2>DIRECCIÓN EJECUTIVA DEL REGISTRO FEDERAL DE ELECTORES<br/>
+                COORDINACIÓN DE OPERACIÓN EN CAMPO
+              </h2>
+              <h3>VERIFICACIÓN NACIONAL MUESTRAL 2015 </h3>
+            </div>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td align="right"><span id="fechaHoy">{FECHA}</span></td>
+          </tr>
+          <tr>
+            <td colspan="2" align="center"></td>
+          </tr>
+        </table>
+        <hr/>
+        <div style="text-align:center;">
+	        {MENSAJE}
+			<table align="center">
+				<form id="flogin" method="post" action="index.php" >
+				<tr>
+					<td>Usuario:</td>
+					<td><input type="text" id="usuario" name="usuario" size="15"></td>
+				</tr>
+				<tr>
+					<td>Clave:</td>
+					<td><input type="password" id="clave" name="clave" size="15"></td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="submit" id="btnEntrar" name="btnEntrar" value="Entrar"></td>
+				</tr>
+				</form>
+			</table>
+		</div>
+		<br/><br/><br/>
+		<hr/>
 		{FOOTER}
 	</body>
 </html>
