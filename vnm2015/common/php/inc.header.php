@@ -10,6 +10,7 @@ date_default_timezone_set("America/Mexico_City");
 header('Content-Type: text/html; charset=utf-8');
 // Detección de ruta y definicion de paths de trabajo
 require_once('inc.path.php');
+session_start();
 $Raiz[local] = $_SESSION[RaizLoc];
 $Raiz[url] = $_SESSION[RaizUrl];
 $Raiz[sitefolder] = $_SESSION[SiteFolder];
@@ -34,5 +35,10 @@ if(!$_SESSION['usuario']) {
 	header('location: '.$Raiz[url].'index.php?e=2');
 	exit();
 }
+$usu[usuario] = $_SESSION['usuario'];
+$usu[grupo] = $_SESSION['grupo'];
+$usu[nombre] = $_SESSION['usuarioNombre'];
+$usu[ent] = $_SESSION['ent'];
+$usu[dto] = $_SESSION['dto'];
 /*O3M*/
 ?>

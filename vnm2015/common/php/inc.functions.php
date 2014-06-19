@@ -88,5 +88,13 @@ function redirectPage($num,$url){
    header($http[$num]);
    header ("Location: $url");
 }
+
+function json($contenido='',$filename='tmp',$ruta='tmp/'){
+// Crea un archivo con notación JSON
+  $archivo=$ruta.$filename.'.json';
+  $fp=fopen($archivo,'a');
+  fwrite($fp,$contenido);
+  fclose($fp);
+}
 /*O3M*/
 ?>
