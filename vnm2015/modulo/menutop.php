@@ -2,9 +2,13 @@
 <?php
 $vista = 'menutop.html';
 $tpl_data = array( 
-			 URL1 => $Path[src].'php/vnm.php?a=inicio'
+			 MORE => '<link href="'.$Path[css].'menutop.css" rel="stylesheet" type="text/css">'
+			,URL1 => $Path[src].'php/vnm.php?a=inicio'
 			,URL2 => $Path[src].'php/vnm.php?a=enumeracion'
 			,URL3 => $Path[src].'php/vnm.php?a=cobertura'
+				,URL31 => $Path[src].'php/vnm.php?a=cobertura'
+				,URL32 => $Path[src].'php/vnm.php?a=cobertura'
+				,URL33 => $Path[src].'php/vnm.php?a=cobertura'
 			,URL4 => $Path[src].'php/vnm.php?a=actualizacion'
 			,URL5 => $Path[src].'php/vnm.php?a=reportes'
 			,URL6 => $Path[src].'php/vnm.php?a=salir'

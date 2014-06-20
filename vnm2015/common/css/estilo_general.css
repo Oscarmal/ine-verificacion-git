@@ -61,50 +61,24 @@ a:hover { text-decoration: underline; color:#FFCC66; }
 	cursor: hand;
 }
 /*--*/
-/*MenuTop*/
-.btnMenu{
-	text-align: center;
-	background-color: #FFF; 
-	color: #FFF;
-	font-weight: bold;
-	border: 1px #DDD solid;   
-	width: 100%;
-	padding-left: 4px;
-	padding-right: 4px;
-	text-shadow: -1px -1px 2px #618926;
-}
-.btnMenu:hover {
-	text-align: center;
-	background-color: #DDD;
-	color: #333;
-	font-weight: bold;
-	width: 100%;    
-	text-shadow: -1px -1px 2px #465f97;
-	cursor: pointer; 
-	cursor: hand;
-}
-a.linkMenu:link { text-decoration: none; color:#333; cursor: pointer; cursor: hand;}
-a.linkMenu:visited { text-decoration: none; color:#333; }
-a.linkMenu:hover { text-decoration: none; color:#333; }
-#menuTop{
-	font-weight: bold;
-	font-size: 14px;
-	text-align: center;
-	vertical-align: middle;
-}
-#fechaHoy{
-	
-	text-align: right;
-	vertical-align: middle;
-	padding-right: 5px;
-}
-/**/
 /*FOOTER*/
 #footer{	
 	font-size: 10px;
-	color: #AAA;
+	color: #5B2E00;
 	text-align: center;
 	vertical-align: middle;
 }
 /*--*/
+/*IFRAME*/
+#divFrame{
+	width:100%;
+	height:600px;
+	overflow:hidden;
+	bottom: 0px;
+}
+#sombra-inf{
+	top: 0px;
+	background: url("../img/sombra-inf.png") repeat-x;
+	height: 19px;
+}
 /*O3M*/
