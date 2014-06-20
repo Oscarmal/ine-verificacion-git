@@ -24,7 +24,10 @@ $actionList = array(
 if(array_key_exists($action,$actionList)){
 	header('location: '.$Raiz[url].$actionList[$action]);
 }else{
-	$params = array(MENSAJE => "Acción no disponible.", ACCION => $action);
+	$params = array(
+		 MORE => '<link href="'.$Path[css].'estilo_contenido.css" rel="stylesheet" type="text/css">'
+		,MENSAJE => "Acción no disponible.", ACCION => $action
+		);
 	print(errorHtml($params));
 }
 /*O3M*/

@@ -83,8 +83,9 @@ function frameHtml($template='frame.html', $params=array()){
 	#FRAME
 	$htmlTpl = $Path['html'].$template;
 	$frame = new Template($htmlTpl);
-	$frame->set('HEADER', $Path[src].'php/vnm.php?a=header');
-	$frame->set('CONTENIDO', $Path[src].'php/vnm.php?a=contenido');
+	// $frame->set('HEADER', $Path[src].'php/vnm.php?a=header');
+	// $frame->set('CONTENIDO', $Path[src].'php/vnm.php?a=contenido');
+	$frame->set('FOOTER',footerHtml());
 	$frame=$frame->output();
 	return $frame;
 }
@@ -97,7 +98,8 @@ function errorHtml($params=array()){
 	$error->set('PATH_JS', $Path[js]);
 	$error->set('PATH_CSS', $Path[css]);
 	$error->set('PATH_IMG', $Path[img]);
-	$error->set('INCLUDES',includesHtml());	
+	$more = ($params[MORE])?$params[MORE]:'';
+	$error->set('INCLUDES', includesHtml($more));
 	$error->set('FOOTER',footerHtml());
 	// Busca variables adicionales dentro array $params
 	if($tvars = count($params)){		

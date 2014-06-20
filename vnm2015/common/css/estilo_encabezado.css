@@ -4,3 +4,48 @@ body {
 	margin-top:0px;
 	background-image:url(../img/fondo.jpg);
 }
+#user{	
+	text-align: left;
+	vertical-align: middle;
+	padding-left: 10px;
+	font-weight: bold;
+}
+#fechaHoy{	
+	text-align: right;
+	vertical-align: middle;
+	padding-right: 10px;
+	font-weight: bold;
+}
+/*MenuTop*/
+.btnMenu{
+	text-align: center;
+	background-color: #FFF; 
+	color: #FFF;
+	font-weight: bold;
+	border: 1px #DDD solid;   
+	width: 100%;
+	padding-left: 4px;
+	padding-right: 4px;
+	text-shadow: -1px -1px 2px #618926;
+}
+.btnMenu:hover {
+	text-align: center;
+	background-color: #DDD;
+	color: #333;
+	font-weight: bold;
+	width: 100%;    
+	text-shadow: -1px -1px 2px #465f97;
+	cursor: pointer; 
+	cursor: hand;
+}
+a.linkMenu:link { text-decoration: none; color:#333; cursor: pointer; cursor: hand;}
+a.linkMenu:visited { text-decoration: none; color:#333; }
+a.linkMenu:hover { text-decoration: none; color:#333; }
+#menuTop{
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+/**/
