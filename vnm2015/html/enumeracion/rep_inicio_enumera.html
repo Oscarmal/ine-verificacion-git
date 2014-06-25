@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<title>DDVC - Subdirección de Verificaci&oacute;n</title>
+		{INCLUDES}
+</head>
+
+<body onLoad="foco()">
+
+<form id="form1" name="form1" method="post" action="guarda_rep_inicio_enumera.php">
+  <p align="center" class="Estilo3"><span class="Estilo1">REPORTE DE INICIO DEL OPERATIVO</span> <span class="Estilo4">ENUMERACI&Oacute;N</span></p>
+  <table width="568" border="1" align="center">
+    <tr>
+      <td colspan="3"><div align="center"><strong>1.-&iquest;ESTUVO COMPLETA LA PLANTILLA ? </strong></div></td>
+    </tr>
+    <tr>
+      <td width="262">S&iacute;
+          <label>
+          <input name="p2" id="p2" type="radio" value="si" onChange="pe2(this.value)" />
+          </label>
+          <label>No
+            <input name="p2" id="p2" type="radio" value="no" onChange="pe2(this.value)" />
+          </label>
+          <label></label></td>
+      <td colspan="2"><strong>&iquest;Por qu&eacute; no estuvo completa?
+          <label>          </label>
+      </strong>
+        <label><textarea name="p2_obs" cols="20" rows="2" disabled="disabled" class="Estilo1" id="p2_obs" onBlur="obs_pe2(this.value)" onKeyUp="form1.p2_obs.value=form1.p2_obs.value.toUpperCase();"></textarea>
+        </label></td>
+    </tr>
+    <tr>
+      <td colspan="3"><div align="center"><strong>2.-&iquest;SE ENTREG&Oacute; INDUMENTARIA A TODAS LAS FIGURAS? </strong></div></td>
+    </tr>
+    <tr>
+      <td>S&iacute;
+        <label>
+        <input name="p3" id="p3" type="radio" value="si" onChange="pre2(this.value)" />
+        </label>
+      <label>No 
+      <input name="p3" id="p3" type="radio" value="no" onChange="pre2(this.value)" />
+      </label></td>
+      <td colspan="2"><label><strong>&iquest;Por qu&eacute; no se entrego?
+</strong>
+          <textarea name="p2_obs_indu" cols="20" rows="2" disabled="disabled" class="Estilo1" id="p2_obs_indu" onBlur="obs_pre2(this.value)" onKeyUp="form1.p2_obs_indu.value=form1.p2_obs_indu.value.toUpperCase();"></textarea>
+      </label></td>
+    </tr>
+    <tr>
+      <td colspan="3"><div align="center"><strong>3.-&iquest;EL PERSONAL DE CAMPO CONT&Oacute; CON EL MATERIAL NECESARIO PARA EL ARRANQUE DEL OPERATIVO? </strong></div></td>
+    </tr>
+    <tr>
+      <td>S&iacute;
+          <label>
+          <input name="p4" id="p4" type="radio" value="si" onChange="pre3(this.value)" />
+		  </label>
+        <label>No
+          <input name="p4" id="p4" type="radio" value="no" onChange="pre3(this.value)" />
+		  </label>	
+</td>
+      <td colspan="2"><label><strong>&iquest;Por qu&eacute; no cont&oacute; con el? </strong>
+          <textarea name="p3_obs_mate" cols="20" rows="2" disabled="disabled" class="Estilo1" id="p3_obs_mate" onBlur="obs_pre3(this.value)" onKeyUp="form1.p3_obs_mate.value=form1.p3_obs_mate.value.toUpperCase();"></textarea>
+      </label></td>
+    </tr>
+    <tr>
+      <td colspan="3"><div align="center"><strong>4- &iquest;SE CONT&Oacute; CON EL APOYO DE VEH&Iacute;CULO OFICIAL ? </strong></div></td>
+    </tr>
+    <tr>
+      <td>S&iacute;
+          <label>
+          <input name="p5" id="p5" type="radio" value="si" onChange="pre4(this.value)" />
+        </label>
+		<label>No
+          <input name="p5" id="p5" type="radio" value="no" onChange="pre4(this.value)" />
+		</label>
+</label></td>
+      <td colspan="2"><label>
+        <strong>&iquest;Por qu&eacute; no conto con veh&iacute;culo?</strong>
+        <textarea name="p4_obs_vehi" cols="20" rows="2" disabled="disabled" class="Estilo1" id="p4_obs_vehi" onBlur="obs_pre4(this.value)" onKeyUp="form1.p4_obs_vehi.value=form1.p4_obs_vehi.value.toUpperCase();"></textarea>
+      </label></td>
+    </tr>
+    <tr>
+      <td colspan="3"><div align="center"><strong>5- &iquest;HUBO PRESENCIA DE PARTIDOS POL&Iacute;TICOS ACREDITADOS DE LA CNV,CLV,CDV? </strong></div></td>
+    </tr>
+    <tr>
+      <td>S&iacute;
+          <label>
+          <input name="p6" type="radio" value="si" onChange="pe6(this.value)" />
+        </label></td>
+      <td colspan="2">No
+        <label>
+          <input name="p6" type="radio" value="no" onChange="pe6(this.value)" />
+        </label></td>
+    </tr>
+    <tr>
+      <td colspan="3"><table width="488" border="1" align="center">
+          <tr>
+            <th width="50" scope="col"><div align="center">P.P</div></th>
+            <th width="102" scope="col"><div align="center">INSTANCIA</div></th>
+            <th width="314" scope="col">NOMBRE DEL REPRESENTANTE </th>
+          </tr>
+          <tr>
+            <td height="27"><label>
+                <div align="center">
+                  <label>
+                  <select name="p6pp1" size="1" disabled="disabled" class="Estilo2" id="p6pp1" onChange="pase_pp_1(this.value)">
+ 					 <option value="0" selected="selected">---</option>
+  					 <option value="1">PAN</option>
+                 	<option value="2">PRI</option>
+  					<option value="3">PRD</option>
+				    <option value="4">PT</option>
+					<option value="5">PVEM</option>
+  					<option value="6">MOVIMIENTO CIUDADANO</option>
+					<option value="7">NUEVA ALIANZA</option>
+				</select>
+                  </label>
+                </div>
+              </label></td>
+            <td><label>
+                <div align="center">
+                  <label>
+                  <select name="p6ins1" size="1" disabled="disabled" class="Estilo2" id="p6ins1" onChange="pase_ins_1(this.value)">
+ 					 <option value="0" selected="selected">---</option>
+  					 <option value="1">CNV</option>
+                 	<option value="2">CLV</option>
+  					<option value="3">CDV</option>
+				   </select>
+                  </label>
+                </div>
+              </label></td>
+            <td><label>
+              <input name="p6nom1" type="text" disabled="disabled" class="Estilo1" id="p6nom1" onBlur="pase_nom_1(this.value)" onKeyUp="form1.p6nom1.value=form1=form1.p6nom1.value.toUpperCase();" size="45" />
+            </label></td>
+          </tr>
+          <tr>
+            <td><label>
+                <div align="center">
+                  <select name="p6pp2" size="1" disabled="disabled" class="Estilo2" id="p6pp2" onChange="pase_pp_2(this.value)">
+                    <option value="0" selected="selected">---</option>
+                    <option value="1">PAN</option>
+                    <option value="2">PRI</option>
+                    <option value="3">PRD</option>
+                    <option value="4">PT</option>
+                    <option value="5">PVEM</option>
+                    <option value="6">MOVIMIENTO CIUDADANO</option>
+                    <option value="7">NUEVA ALIANZA</option>
+                  </select>
+                </div>
+              </label></td>
+            <td><label>
+                <div align="center">
+                  <select name="p6ins2" size="1" disabled="disabled" class="Estilo2" id="p6ins2" onChange="pase_ins_2(this.value)">
+                    <option value="0" selected="selected">---</option>
+                    <option value="1">CNV</option>
+                    <option value="2">CLV</option>
+                    <option value="3">CDV</option>
+                  </select>
+                </div>
+              </label></td>
+            <td><label>
+              <input name="p6nom2" type="text" disabled="disabled" class="Estilo1" id="p6nom2" onBlur="pase_nom_2(this.value)" onKeyUp="form1.p6nom2.value=form1=form1.p6nom2.value.toUpperCase();" size="45" /> 
+            </label></td>
+          </tr>
+          <tr>
+            <td><label>
+                <div align="center">
+                  <select name="p6pp3" size="1" disabled="disabled" class="Estilo2" id="p6pp3" onChange="pase_pp_3(this.value)">
+                    <option value="0" selected="selected">---</option>
+                    <option value="1">PAN</option>
+                    <option value="2">PRI</option>
+                    <option value="3">PRD</option>
+                    <option value="4">PT</option>
+                    <option value="5">PVEM</option>
+                    <option value="6">MOVIMIENTO CIUDADANO</option>
+                    <option value="7">NUEVA ALIANZA</option>
+                  </select>
+                </div>
+              </label></td>
+            <td><label>
+                <div align="center">
+                  <select name="p6ins3" size="1" disabled="disabled" class="Estilo2" id="p6ins3" onChange="pase_ins_3(this.value)">
+                    <option value="0" selected="selected">---</option>
+                    <option value="1">CNV</option>
+                    <option value="2">CLV</option>
+                    <option value="3">CDV</option>
+                  </select>
+                </div>
+              </label></td>
+            <td><label>
+              <input name="p6nom3" type="text" disabled="disabled" class="Estilo1" id="p6nom3" onBlur="pase_nom_3(this.value)" onKeyUp="form1.p6nom3.value=form1=form1.p6nom3.value.toUpperCase();" size="45" />
+            </label></td>
+          </tr>
+          <tr>
+            <td><label>
+                <div align="center">
+                  <select name="p6pp4" size="1" disabled="disabled" class="Estilo2" id="p6pp4" onChange="pase_pp_4(this.value)">
+                    <option value="0" selected="selected">---</option>
+                    <option value="1">PAN</option>
+                    <option value="2">PRI</option>
+                    <option value="3">PRD</option>
+                    <option value="4">PT</option>
+                    <option value="5">PVEM</option>
+                    <option value="6">MOVIMIENTO CIUDADANO</option>
+                    <option value="7">NUEVA ALIANZA</option>
+                  </select>
+                </div>
+              </label></td>
+            <td><label>
+                <div align="center">
+                  <select name="p6ins4" size="1" disabled="disabled" class="Estilo2" id="p6ins4" onChange="pase_ins_4(this.value)">
+                    <option value="0" selected="selected">---</option>
+                    <option value="1">CNV</option>
+                    <option value="2">CLV</option>
+                    <option value="3">CDV</option>
+                  </select>
+                </div>
+              </label></td>
+            <td><label>
+              <input name="p6nom4" type="text" disabled="disabled" class="Estilo1" id="p6nom4" onBlur="pase_nom_4(this.value)" onKeyUp="form1.p6nom4.value=form1=form1.p6nom4.value.toUpperCase();" size="45" />
+            </label></td>
+          </tr>
+          <tr>
+            <td><label>
+                <div align="center">
+                  <select name="p6pp5" size="1" disabled="disabled" class="Estilo2" id="p6pp5" onChange="pase_pp_5(this.value)">
+                    <option value="0" selected="selected">---</option>
+                    <option value="1">PAN</option>
+                    <option value="2">PRI</option>
+                    <option value="3">PRD</option>
+                    <option value="4">PT</option>
+                    <option value="5">PVEM</option>
+                    <option value="6">MOVIMIENTO CIDUADANO</option>
+                    <option value="7">NUEVA ALIANZA</option>
+                  </select>
+                </div>
+              </label></td>
+            <td><label>
+                <div align="center">
+                  <select name="p6ins5" size="1" disabled="disabled" class="Estilo2" id="p6ins5" onChange="pase_ins_5(this.value)">
+                    <option value="0" selected="selected">---</option>
+                    <option value="1">CNV</option>
+                    <option value="2">CLV</option>
+                    <option value="3">CDV</option>
+                  </select>
+                </div>
+              </label></td>
+            <td><label>
+              <input name="p6nom5" type="text" disabled="disabled" class="Estilo1" id="p6nom5" onBlur="pase_nom_5(this.value)" onKeyUp="form1.p6nom5.value=form1=form1.p6nom5.value.toUpperCase();" size="45"/>
+            </label></td>
+          </tr>
+      </table></td>
+    </tr>
+    <tr>
+      <td colspan="3"><div align="center"><strong>6.- &iquest;SE PRESENT&Oacute; ALGUNA INCIDENCIA? </strong></div></td>
+    </tr>
+    <tr>
+      <td>S&iacute;
+          <label>
+          <input name="p7" type="radio" value="si" onChange="pe7(this.value)" />
+        </label></td>
+      <td colspan="2">No
+        <label>
+          <input name="p7" type="radio" value="no" onChange="pe7(this.value)" />
+        </label></td>
+    </tr>
+    <tr>
+      <td colspan="3"><div align="left"><strong>EXPLIQUE:</strong>
+          <textarea name="p7_obs" cols="45" rows="2" disabled="disabled" class="Estilo1" id="p7_obs" onBlur="p7obs(this.value)" onKeyUp="form1.p7_obs.value=form1.p7_obs.value.toUpperCase();"></textarea>
+      </div>        <label></label></td>
+    </tr>
+    <tr>
+      <th colspan="3" scope="col">7.- &iquest;SE REALIZ&Oacute; ENSAYO DE CAMPO EN EL DISTRITO? </th>
+    </tr>
+    <tr>
+      <td>S&iacute;
+          <label>
+          <input name="p11" type="radio" value="si" />
+        </label></td>
+      <td colspan="2">No
+        <label>
+          <input name="p11" type="radio" value="no" />
+        </label></td>
+    </tr>
+    <tr>
+      <th colspan="3" scope="col"><div align="center">
+        <input name="id_ent" type="hidden" id="id_ent" value=" <?php echo $txtEnt?>" />
+        <input name="nom_ent" type="hidden" id="nom_ent" value="<?php echo $noment ?>" />
+        <input name="dis" type="hidden" id="dis" value="<?php echo $dis ?>" />
+        <input name="usuario" type="hidden" id="usuario" value="<?php echo $usr ?>" />
+  8.-&iquest;INICIARON LOS TRABAJOS DE CAMPO? </div></th>
+    </tr>
+    <tr>
+      <td>S&iacute;
+          <label>
+          <input name="p1" id="p1" type="radio" value="si" onChange="pe1(this.value)">
+          </label>
+        hora:
+        <input name="p1hrs" type="text" id="p1hrs" size="5" maxlength="5" disabled="disabled" onBlur="validaHora(this.value)" />
+        HH:MM</td>
+      <td width="27"> No
+        <input name="p1" id="p1" type="radio" value="no" onChange="pe1(this.value)"></td>
+      <td width="257"><p><strong>&iquest;Por qu&eacute; no se iniciaron, justifique?
+        <label> </label>
+          </strong>
+              <textarea name="p1_obs" cols="40" rows="2" disabled="disabled" class="Estilo1" id="p1_obs" onBlur="p1_observacion(this.value)"  onkeyup="form1.p1_obs.value=form1.p1_obs.value.toUpperCase();"></textarea>
+      </p></td>
+    </tr>
+    <tr>
+      <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="3"><div align="center"><strong>OBSERVACI&Oacute;NES Y COMENTARIOS </strong></div></td>
+    </tr>
+    <tr>
+      <td colspan="3"><label>
+          <div align="center">
+            <textarea name="obs" cols="60" rows="3" disabled="disabled" class="Estilo1" id="obs" onBlur="observaciones(this.value)"onkeyup="form1.obs.value=form1.obs.value.toUpperCase();" ></textarea>
+          </div>
+        </label></td>
+    </tr>
+    <tr>
+      <td><div align="center">
+          <input name="Input" type="reset" class="btn" value="LIMPIAR FORMULARIO" />
+      </div></td>
+      <td colspan="2"><label>
+          <div align="center">
+        <input name="btn_guarda_rep_ini" type="submit" class="btn" id="btn_guarda_rep_ini" value="GUARDAR INFORMACI&Oacute;N" disabled="disabled" onMouseOver="return validar(p2, p3, p4, p5, p6, p7,p11,p1);"/><!--                  onClick="return Validar(p1.value);"-->
+          </div>
+        </label></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

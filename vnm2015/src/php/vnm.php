@@ -16,7 +16,8 @@ $actionList = array(
 		,HEADER => 'modulo/html_header.php'
 		,FOOTER => 'modulo/html_footer.php'
 		,MENU => 'modulo/menutop.php'
-		// ,ENUMERACION => 'modulo/enumeracion/'
+		,ENUMERACION => 'modulo/enumeracion/'
+			,REP_INICIO_ENUMERA => 'modulo/enumeracion/rep_inicio_enumera.php'
 		// ,COBERTURA => 'modulo/cobertura/'
 		// ,ACTUALIZACION => 'modulo/actualizacion/'
 		);
