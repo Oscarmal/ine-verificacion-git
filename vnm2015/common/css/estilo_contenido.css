@@ -7,3 +7,9 @@ body {
 	color: red;
 	background-image:url(../img/logo-ife.gif);
 }
+
+.switch-wrapper {
+  display: inline-block;
+  position: relative;
+  top: 3px;
+}
