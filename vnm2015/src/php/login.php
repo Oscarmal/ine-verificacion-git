@@ -25,11 +25,12 @@ parseFormSanitizer($_GET, $_POST);
 if($ins[auth]){
 	if(!empty($ins[usuario]) && !empty($ins[clave])){
 		$tabla = "usuarios_test";
-		$sql = "SELECT count(*), usuario, nombre, apellidos, grupo, id_ent, id_dtto FROM $tabla WHERE usuario='$ins[usuario]' and clave='$ins[clave]'";
+		$sql = "SELECT count(*), usuario, nombre, apellidos, grupo, id_ent, id_dtto, id_usuario FROM $tabla WHERE usuario='$ins[usuario]' and clave='$ins[clave]'";
 		$sqlResult = SQLQuery($sql);
 		if($sqlResult[0]){
 			session_name('ddvc');
 			session_start();
+			$_SESSION['id_usuario'] = $sqlResult[id_usuario];
 			$_SESSION['usuario'] = $sqlResult[usuario];
 			$_SESSION['grupo'] = $sqlResult[grupo];
 			$_SESSION['usuarioNombre'] = $sqlResult[nombre].' '.$sqlResult[apellidos];

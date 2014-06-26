@@ -14,13 +14,13 @@ parseFormSanitizer($_GET, $_POST);
 /**********/
 unset($_SESSION['usuario']);
 switch($ins[e]){
-	case 1 : $msj = "Sesión Cerrada.";
+	case 1 : $msj = "<span class='text-blue'>Sesión Cerrada.</span>";
 		break;
-	case 2 : $msj = "Los datos de Usuario/Clave son incorrectos.";
+	case 2 : $msj = "<span class='text-blue'>Los datos de Usuario/Clave son incorrectos.</span>";
 		break;
-	case 3 : $msj = "Sin autorización para entrar.";
+	case 3 : $msj = "<span class='text-red'>Sin autorización para entrar.</span>";
 		break;
-	default : $msj = "Ingrese su usuario y contraseña";
+	default : $msj = "<span class='text-red'>Ingrese su usuario y contraseña</span>";
 }	
 
 //--Template

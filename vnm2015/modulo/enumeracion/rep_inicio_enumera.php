@@ -3,7 +3,7 @@
 $vista = 'enumeracion/rep_inicio_enumera.html';		
 $tpl_data = array( 
 			 MORE => '<link href="'.$Path[css].'estilo_contenido.css" rel="stylesheet" type="text/css">
-			          <script type="text/javascript"  src="'.$Path[js].'prototype.js"></script>
+			          
 			          <script type="text/javascript"  src="'.$Path[src].'js/enumeracion/rep_inicio_enumera.js"></script>'
 			
 		);

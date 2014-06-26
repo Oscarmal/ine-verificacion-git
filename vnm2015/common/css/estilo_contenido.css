@@ -12,3 +12,16 @@ body {
   position: relative;
   top: 3px;
 }
+
+.text-red{
+	color: red;
+	font-weight: bold;
+}
+.text-blue{
+	color: blue;
+	font-weight: bold;
+}
+.text-orange{
+	color: orange;
+	font-weight: bold;
+}

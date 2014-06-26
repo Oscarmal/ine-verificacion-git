@@ -10,7 +10,7 @@
           <tr>
             <td width="200" align="left" valign="middle"><img src="{LOGO}"></td>
             <td width="*" align="right">
-            <div style="text-align:right;" align="right">
+            <div id="titulo" style="text-align:right;" align="right">
               <h2>DIRECCIÓN EJECUTIVA DEL REGISTRO FEDERAL DE ELECTORES<br/>
                 COORDINACIÓN DE OPERACIÓN EN CAMPO
               </h2>
@@ -19,7 +19,7 @@
             </td>
           </tr>
           <tr>
-            <td align="left" valign="top">{USUARIO}</td>
+            <td align="left" valign="top"><span id="user">{USUARIO}</span></td>
             <td align="right"><span id="fechaHoy">{FECHA}</span></td>
           </tr>
           <tr>
@@ -28,7 +28,7 @@
         </table>
         <br/>
         <div id="divFrame">
-          <iframe id="contenido" name="contenido" src="{CONTENIDO}" width="100%" height="100%" scrolling="Auto" frameborder="0"></iframe>                    
+          <iframe id="contenido" name="contenido" src="{CONTENIDO}" width="100%" height="100%" scrolling="No" frameborder="0"></iframe>                    
         </div>        
         <div id="sombra-inf"></div>
         {FOOTER}

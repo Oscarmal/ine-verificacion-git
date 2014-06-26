@@ -6,23 +6,33 @@
 		{INCLUDES}
 </head>
 
-<body onLoad="foco()">
+<body >
 
 <form id="form1" name="form1" method="post" action="guarda_rep_inicio_enumera.php">
   <p align="center" class="Estilo3"><span class="Estilo1">REPORTE DE INICIO DEL OPERATIVO</span> <span class="Estilo4">ENUMERACI&Oacute;N</span></p>
-  <table width="568" border="1" align="center">
+  <table width="568" border="0" align="center">
     <tr>
       <td colspan="3"><div align="center"><strong>1.-&iquest;ESTUVO COMPLETA LA PLANTILLA ? </strong></div></td>
     </tr>
     <tr>
-      <td width="262">S&iacute;
+      <td width="262" align="center">
+      <!--  -->
+        <!-- <span class="field switch" >
+          <input type="radio" id="p2-si" name="p2" value="si"  />
+          <input type="radio" id="p2-no" name="p2" value="no" />
+          <label for="p2-si" class="cb-enable " onClick="pe2(1)"><span>SI</span></label>
+          <label for="p2-no" class="cb-disable" onClick="pe2(0)"><span>NO</span></label>
+        </span> -->
+      <!--  -->
+
+      S&iacute;
           <label>
           <input name="p2" id="p2" type="radio" value="si" onChange="pe2(this.value)" />
           </label>
           <label>No
             <input name="p2" id="p2" type="radio" value="no" onChange="pe2(this.value)" />
           </label>
-          <label></label></td>
+          </td>
       <td colspan="2"><strong>&iquest;Por qu&eacute; no estuvo completa?
           <label>          </label>
       </strong>

@@ -1,35 +1,33 @@
-// JavaScript Document
+// jq = jQuery.noConflict();
+$.noConflict();
 
-		function foco(){
-		alert("CONTESTA DETENIDAMENTE EL REPORTE DE INICIO POR FAVOR");
-			document.getElementById("p2").focus();
-		}
+$(document).ready(function(){
+
+});
+
+function foco(){
+// alert("CONTESTA DETENIDAMENTE EL REPORTE DE INICIO POR FAVOR");
+	// document.getElementById("p2").focus();
+}
+
 //funcion para la primer		
 function pe2(b){
-  
-  			if(b=='si'){
-			
-			 $("p2_obs").disabled=true;
-			 $("p2_obs").value="";
-			 $("p3").disabled=false;
-			 $("p3").focus();	
-			 
-			 
-			 
-			 }else if (b=='no'){
-			 
-			 alert("Ingresa el motivo por el cual no estuvo completa la plantilla");
-			 $("p2_obs").disabled=false;
-			 $("p2_obs").focus();
- 	 	     
-			 
-
-			 }else{
-	  
+	// if(b){b = 'si';}else{b='no';}
+	if(b=='si'){		
+		 $("p2_obs").disabled=true;
+		 $("p2_obs").value="";
+		 $("p3").disabled=false;		 
+		 $("p3").focus();	
+	 }else if (b=='no'){	
+		 alert("Ingresa el motivo por el cual no estuvo completa la plantilla");
+		 // $("#p2_obs").prop('disabled', false);
+		 $("p2_obs").disabled=false;
+		 $("p2_obs").focus();
+	}else{
 	     alert("solo puedes seleccionar si o no ");
 		 $("p2").focus();
 		 $("p2").value="";
-	  }
+	 }
 }
 
 

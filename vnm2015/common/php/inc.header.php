@@ -35,6 +35,7 @@ if(!$_SESSION['usuario']) {
 	header('location: '.$Raiz[url].'index.php?e=2');
 	exit();
 }
+$usu[id_usuario] = $_SESSION['id_usuario'];
 $usu[usuario] = $_SESSION['usuario'];
 $usu[grupo] = $_SESSION['grupo'];
 $usu[nombre] = $_SESSION['usuarioNombre'];

@@ -6,12 +6,12 @@ function validaCampos(){
 	var usuario = $("#usuario").val();
 	var clave = $("#clave").val();
 	if(usuario == ''){
-		showMessage("Por favor, ingrese su nombre de Usuario", '#msj');
+		showMessage("<span class='text-orange'>Por favor, ingrese su nombre de Usuario</span>", '#msj');
 		$("#usuario").focus();
 		return false;
 	}
 	if(clave == ''){
-		showMessage("Por favor, ingrese su Clave", '#msj');
+		showMessage("<span class='text-orange'>Por favor, ingrese su Clave</span>", '#msj');
 		$("#clave").focus();
 		return false;
 	}

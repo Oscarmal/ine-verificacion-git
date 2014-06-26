@@ -5,7 +5,7 @@
 		<title>DDVC - Subdirección de Verificaci&oacute;n</title>
 		{INCLUDES}
 	</head>
-	<body >
+	<body onkeypress="enter(event,'btnEntrar')">
 		<table width="100%" border="0" cellspacing="0" cellpadding="0">
           <tr>
             <td width="200" align="left" valign="middle"><img src="{LOGO}"></td>
@@ -37,10 +37,10 @@
 				</tr>
 				<tr>
 					<td>Clave:</td>
-					<td><input type="password" id="clave" name="clave" size="15"></td>
+					<td><input type="password" id="clave" name="clave" size="15" ></td>
 				</tr>
 				<tr>
-					<td colspan="2"><input type="button" id="btnEntrar" name="btnEntrar" value="Entrar" onClick="validaCampos()" class="btn"></td>
+					<td colspan="2"><input type="button" id="btnEntrar" name="btnEntrar" value="Entrar" onClick="validaCampos()" class="btn" ></td>
 				</tr>
 				</form>
 			</table>

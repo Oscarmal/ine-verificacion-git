@@ -4,6 +4,11 @@ body {
 	margin-top:0px;
 	background-image:url(../img/fondo.jpg);
 }
+#titulo{	
+	text-align: right;
+	vertical-align: middle;
+	padding-right: 10px;
+}
 #user{	
 	text-align: left;
 	vertical-align: middle;
